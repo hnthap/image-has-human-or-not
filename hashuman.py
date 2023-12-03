@@ -1,5 +1,6 @@
 import argparse
 import joblib
+import os
 from pathlib import PurePath
 import pickle
 import requests
@@ -51,6 +52,8 @@ def main():
             f.write(res.content)
 
     img = cv.imread(filename, 0)
+    os.remove(filename)
+
     cropped_img = crop_square(img)
 
     resized_cropped_img = resize_image(cropped_img)
