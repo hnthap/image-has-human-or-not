@@ -1,3 +1,6 @@
-# image files
+# Cache
+__pycache__
+
+# Image files
 *.jpeg
 *.jpg
